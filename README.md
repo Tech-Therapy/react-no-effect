@@ -23,7 +23,7 @@ Can it be calculated from props/state?    → Just calculate it at render time
 Does it reset state when a prop changes?  → Use the `key` prop
 ```
 
-It then covers 12 concrete patterns — derived state, expensive calculations, state resets, shared event-handler logic, POST requests, chained Effects, app init, parent notification, lifting data up, external store subscriptions, and correct data fetching — each with a before/after code example in [`references/examples.md`](skills/react-no-effect/references/examples.md).
+It then covers 12 concrete patterns — derived state, expensive calculations, state resets, shared event-handler logic, POST requests, chained Effects, app init, parent notification, lifting data up, external store subscriptions, and correct data fetching — each with its own before/after code example under [`references/`](skills/react-no-effect/references/), one file per rule.
 
 Once installed, Claude will automatically consult this skill whenever:
 - you write or paste code containing `useEffect`
@@ -62,7 +62,18 @@ Claude Code picks up skills under `.claude/skills/` (project), `~/.claude/skills
 
 ```
 skills/react-no-effect/
-├── SKILL.md                  # the rules Claude follows
+├── SKILL.md                              # the rules Claude follows
 └── references/
-    └── examples.md           # full before/after code per rule
+    ├── 01-derived-state.md
+    ├── 02-expensive-calculation.md
+    ├── 03-state-reset-on-prop-change.md
+    ├── 04-adjusting-some-state.md
+    ├── 05-sharing-logic-between-handlers.md
+    ├── 06-post-requests.md
+    ├── 07-chains-of-effects.md
+    ├── 08-app-initialization.md
+    ├── 09-notifying-parent.md
+    ├── 10-passing-data-up.md
+    ├── 11-external-store-subscriptions.md
+    └── 12-data-fetching.md               # one file per rule, full before/after code
 ```
