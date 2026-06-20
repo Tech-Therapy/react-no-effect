@@ -49,7 +49,14 @@ git clone https://github.com/Tech-Therapy/react-no-effect.git
 cp -r react-no-effect/skills/react-no-effect ~/.claude/skills/
 ```
 
-Claude Code picks up skills under `.claude/skills/` (project) or `~/.claude/skills/` (user) automatically — no restart or config change needed. You can confirm it loaded by asking Claude to list its available skills, or just paste a component with a `useEffect` and see if it flags it.
+**Agents-level** (for tools that read the shared `.agants/skills` convention instead of `.claude/skills`):
+
+```bash
+git clone https://github.com/Tech-Therapy/react-no-effect.git
+cp -r react-no-effect/skills/react-no-effect <your-project>/.agants/skills/
+```
+
+Claude Code picks up skills under `.claude/skills/` (project), `~/.claude/skills/` (user), or `.agants/skills/` (project, shared agent convention) automatically — no restart or config change needed. You can confirm it loaded by asking Claude to list its available skills, or just paste a component with a `useEffect` and see if it flags it.
 
 ## Repo layout
 
